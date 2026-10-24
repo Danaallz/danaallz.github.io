@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credentials &amp; Achievements | Dana Alzahrani</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Certificate image inside each credential card */
+        .credential-image-button {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 1rem 0;
+            border: none;
+            background: transparent;
+            cursor: zoom-in;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .credential-image {
+            display: block;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .credential-image-button:hover .credential-image {
+            transform: scale(1.03);
+        }
+
+        .image-hint {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* Full-size image overlay */
+        .certificate-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.88);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-lightbox.open {
+            display: flex;
+        }
+
+        .certificate-lightbox img {
+            display: block;
+            max-width: 92vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            background: white;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 14px;
+            right: 22px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: #222;
+            font-size: 30px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover {
+            background: #e5e5e5;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 12px;
+            right: 12px;
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+            .certificate-lightbox {
+                padding: 12px;
+            }
+
+            .certificate-lightbox img {
+                max-width: 96vw;
+                max-height: 82vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="nav-inner">
+        <a class="logo" href="index.html">Dana Alzahrani</a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+        >☰</button>
+
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="design.html">Design</a>
+            <a href="skills.html">Skills</a>
+            <a href="certifications.html" aria-current="page">Credentials</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="page-intro">
+        <div class="container">
+            <p class="eyebrow">Professional Development</p>
+
+            <h1>Credentials &amp; Achievements</h1>
+
+            <p>
+                <!--Professional certifications, technical courses, and
+                achievements that reflect my continuous learning
+                and development.--> Technical courses, training programs and achievements that reflect my continuous learning
+                and development
+            </p>
+        </div>
+    </section>
+
+    <!-- Completed Credentials -->
+    <section class="content-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Completed Credentials</h2>
+                <p>
+                    <!-- Certificates, courses, and achievements from my
+                    technical and professional development.-->
+                </p>
+            </div>
+
+            <div class="card-grid">
+
+                <!-- Huawei Cloud Computing -->
+                <article class="card">
+                    <p class="card-label">Course</p>
+                    <h3>HCIA-Cloud Computing V5.5</h3>
+
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/HCIA-Cloud Computing V5.5 Course.png"
+                        data-title="HCIA-Cloud Computing V5.5"
+                        aria-label="Enlarge HCIA-Cloud Computing V5.5 certificate"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/HCIA-Cloud Computing V5.5 Course.png"
+                            alt="HCIA-Cloud Computing V5.5 course certificate"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Huawei · Course completion</p>
+                    <p>Issue date: 09 Jul 2025</p>
+                </article>
+
+                <!-- Cloud Architecture -->
+                <article class="card">
+                    <p class="card-label">Course</p>
+                    <h3>Cloud Advanced: Architecture and Technologies</h3>
+
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/Cloud Advanced_ Architecture and Technologies.png"
+                        data-title="Cloud Advanced: Architecture and Technologies"
+                        aria-label="Enlarge Cloud Advanced certificate"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/Cloud Advanced_ Architecture and Technologies.png"
+                            alt="Cloud Advanced: Architecture and Technologies course certificate"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Huawei · Course completion</p>
+                    <p>Issue date: 09 Apr 2025</p>
+                </article>
+
+                <!-- openEuler -->
+                <article class="card">
+                    <p class="card-label">Course</p>
+                    <h3>HCIA-openEuler V1.0</h3>
+
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/HCIA-openEuler V1.0 Course.png"
+                        data-title="HCIA-openEuler V1.0"
+                        aria-label="Enlarge HCIA-openEuler certificate"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/HCIA-openEuler V1.0 Course.png"
+                            alt="HCIA-openEuler V1.0 course certificate"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Huawei · Course completion</p>
+                    <p>Issue date: 29 Jul 2025</p>
+                </article>
+
+                <!-- Datacom -->
+                <article class="card">
+                    <p class="card-label">Course</p>
+                    <h3>HCIA-Datacom V1.0</h3>
+
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/_HCIA-Datacom V1.0 Course.png"
+                        data-title="HCIA-Datacom V1.0"
+                        aria-label="Enlarge HCIA-Datacom certificate"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/_HCIA-Datacom V1.0 Course.png"
+                            alt="HCIA-Datacom V1.0 course certificate"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Huawei · Course completion</p>
+                    <p>Issue date: 27 Jul 2025</p>
+                </article>
+
+                <!-- Cloud Service -->
+                <article class="card">
+                    <p class="card-label">Training Program</p>
+                    <h3>HCIA-Cloud Service V3.5</h3>
+
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/HCIA-Cloud Service V3.5 Course（Colombia Training Program）.png"
+                        data-title="HCIA-Cloud Service V3.5"
+                        aria-label="Enlarge HCIA-Cloud Service certificate"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/HCIA-Cloud Service V3.5 Course（Colombia Training Program）.png"
+                            alt="HCIA-Cloud Service V3.5 course certificate"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Huawei · Course completion</p>
+                    <p>Issue date: 26 Dec 2025</p>
+                </article>
+
+                <!-- Cloud Computing Basics -->
+                <article class="card">
+                    <p class="card-label">Training Program</p>
+                    <h3>Development and Basic Concepts of Cloud Computing</h3>
+
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/Cloud Basics_ Development and Basic Concepts(CRA Training Program).png"
+                        data-title="Development and Basic Concepts of Cloud Computing"
+                        aria-label="Enlarge Cloud Computing Basics certificate"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/Cloud Basics_ Development and Basic Concepts(CRA Training Program).png"
+                            alt="Development and Basic Concepts of Cloud Computing course certificate"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Huawei · Course completion</p>
+                    <p>Issue date: 29 Apr 2025</p>
+                </article>
+
+                <!-- Tuwaiq Academy Award -->
+                <article class="card">
+                    <p class="card-label">Award / Achievement</p>
+                    <h3>Tuwaiq Academy Hackathon</h3>
+
+                    <!-- Add your award image and update the filename when available. -->
+                    <button
+                        type="button"
+                        class="credential-image-button"
+                        data-image="images/TuwaiqAcademy.jpg"
+                        data-title="Tuwaiq Academy Hackathon"
+                        aria-label="Enlarge Tuwaiq Academy Hackathon award"
+                    >
+                        <img
+                            class="credential-image"
+                            src="images/TuwaiqAcademy.jpg"
+                            alt="Tuwaiq Academy Hackathon award"
+                            loading="lazy"
+                        >
+                    </button>
+
+                    <span class="image-hint">Click image to enlarge</span>
+                    <p>Tuwaiq Academy, AI league finalist, 2025</p>
+                </article>
+
+            </div>
+
+            <div class="status-note">
+                <strong>In progress or planned:</strong>
+                You can list ECBA or other certifications here later,
+                clearly labeled as “In progress” or “Planned.”
+                Do not present them as completed until you earn them.
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Image Lightbox -->
+<div
+    class="certificate-lightbox"
+    id="certificate-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Certificate image preview"
+    aria-hidden="true"
+>
+    <button
+        type="button"
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Close enlarged certificate"
+    >&times;</button>
+
+    <img id="lightbox-image" src="" alt="">
+
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<footer class="site-footer">
+    <p>© <span id="current-year"></span> Dana Alzahrani</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    const lightbox = document.getElementById("certificate-lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeButton = document.getElementById("lightbox-close");
+    const imageButtons = document.querySelectorAll(".credential-image-button");
+
+    let previousFocus = null;
+
+    imageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const imagePath = button.dataset.image;
+            const title = button.dataset.title;
+            const previewImage = button.querySelector("img");
+
+            // Don't open a missing certificate image.
+            if (!previewImage || !previewImage.complete || previewImage.naturalWidth === 0) {
+                alert("This certificate image is not available yet. Please add the image file to your images folder.");
+                return;
+            }
+
+            previousFocus = button;
+            lightboxImage.src = imagePath;
+            lightboxImage.alt = previewImage.alt;
+            lightboxCaption.textContent = title;
+
+            lightbox.classList.add("open");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.classList.add("lightbox-open");
+            closeButton.focus();
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+
+        lightboxImage.src = "";
+        lightboxCaption.textContent = "";
+
+        if (previousFocus) {
+            previousFocus.focus();
+        }
+    }
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && lightbox.classList.contains("open")) {
+            closeLightbox();
+        }
+    });
+</script>
+
+</body>
+</html>
